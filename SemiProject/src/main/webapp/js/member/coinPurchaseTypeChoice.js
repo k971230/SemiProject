@@ -69,6 +69,28 @@
  }
  
  
+ // ==== DB 상의 tbl_member 테이블에 해당 사용자의 코인금액 및 포인트를 증가(update)시켜주는 함수 === //
+function goCoin_DB_Update(user_id, coinmoney) {
+   
+   console.log(`~~ 확인용 userid : ${user_id}, coinmoney : ${coinmoney}원`);
+   
+   const frm = document.coin_DB_Update_Frm;
+   frm.user_id.value = user_id;
+   frm.coinmoney.value = coinmoney;
+   
+   alert(user_id);
+   alert(coinmoney);
+   
+   
+   frm.action = `/SemiProject/member/coinUpdateLoginUser.bz`;
+   frm.method="post";
+   frm.submit();
+   
+   
+}
+	
+ 
+ 
  
  
  
