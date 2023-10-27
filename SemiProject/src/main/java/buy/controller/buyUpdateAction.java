@@ -1,4 +1,4 @@
-package member.controller;
+package buy.controller;
 
 import java.sql.SQLException;
 import java.text.DecimalFormat;
@@ -14,7 +14,7 @@ import member.domain.MemberVO;
 import member.model.MemberDAO;
 import member.model.MemberDAO_imple;
 
-public class CoinUpdateLoginUserAction extends AbstractController {
+public class buyUpdateAction extends AbstractController {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -70,6 +70,13 @@ public class CoinUpdateLoginUserAction extends AbstractController {
 					 * df.format(Long.parseLong(coinmoney)) + "원 결제가 완료되었습니다. "; loc =
 					 * request.getContextPath()+"/index.bz";
 					 */
+					
+					
+					
+					
+					
+					
+					
 					
 				}
 				

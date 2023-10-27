@@ -6,7 +6,7 @@
 
 <%-- 직접 만든 JS --%>
 <script type="text/javascript" src="<%= ctxPath%>/js/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="<%= ctxPath%>/js/member/coinPurchaseTypeChoice.js"></script>
+<script type="text/javascript" src="<%= ctxPath%>/js/member/buy.js"></script>
 
 
 
@@ -355,7 +355,7 @@ td#error {
      <div class="purchase-btn text-center">
 	 	<ul class="list-unstyled">
 	 	
-	    	<li id="purchase" onclick="goCoinPayment('<%=ctxPath %>','${sessionScope.loginuser.user_id}')" class="btn btn-primary">
+	    	<li id="purchase" onclick="buyclick('<%=ctxPath %>','${sessionScope.loginuser.user_id}')" class="btn btn-primary">
 	          &nbsp;<i class="fa-brands fa-square-facebook"></i> 구매하기시발
 	    	</li>
 	      	

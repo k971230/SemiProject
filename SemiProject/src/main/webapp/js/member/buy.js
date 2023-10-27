@@ -24,7 +24,7 @@
  
  
  // "충전결제하기" 를 클릭했을 때 이벤트 처리하기 
- function goCoinPayment(ctx_Path , user_id){
+ function buyclick(ctx_Path , user_id){
 	 
  	 const checked_cnt = $("input:radio[name='coinmoney']:checked").length; // 라디오 태그를 하나 이상 입력했는지 확인
  
@@ -52,7 +52,7 @@
 	   
 	    const left = Math.ceil((window.screen.width - width)/2) ;
 	    const top = Math.ceil(( window.screen.height - height)/2) ;
-	    window.open(url, "coinPurchaseTypeChoiceEnd", 
+	    window.open(url, "buyUpdate", 
 	    			`left=${left}, top=${top}, width=${width}, height=${height}`);   //\을 빼면 저장소인 request.scope로 인식하기 때문에 앞에다 넣어줘야 한다. 변수로 인식해야한다.
 	
 	 }
@@ -62,7 +62,7 @@
  
  
  // ==== DB 상의 tbl_member 테이블에 해당 사용자의 코인금액 및 포인트를 증가(update)시켜주는 함수 === //
- function goCoin_DB_Update(user_id, coinmoney) {
+ function buyUpdate(user_id, coinmoney) {
    
  	console.log(`~~ 확인용 userid : ${user_id}, coinmoney : ${coinmoney}원`);
  	
@@ -70,7 +70,7 @@
     frm.user_id.value = user_id;
     frm.coinmoney.value = coinmoney;
      
-    frm.action = `/SemiProject/member/coinUpdateLoginUser.bz`;
+    frm.action = `/SemiProject/member/buyUpdate.bz`;
     frm.method="post";
     frm.submit();
    
