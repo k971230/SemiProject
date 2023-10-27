@@ -598,6 +598,7 @@ public class MemberDAO_imple implements MemberDAO {
 		return isExists;
 	}// end of public boolean emailDuplicateCheck(String user_email) throws SQLException------
 
+	
 	// 결제 디비 업데이트
 	@Override
 	public int coinUpdateLoginUser(Map<String, String> paraMap) throws SQLException {
@@ -608,7 +609,7 @@ public class MemberDAO_imple implements MemberDAO {
 			conn = ds.getConnection();
 			
 			String sql = " UPDATE tbl_user "
-					+ " SET user_payment = user_payment + ?, user_coin = user_coin + ? "
+					+ " SET user_payment = user_payment + ? , user_coin = user_coin + ? "
 					+ " WHERE user_id = ? ";
 						
 			pstmt = conn.prepareStatement(sql);

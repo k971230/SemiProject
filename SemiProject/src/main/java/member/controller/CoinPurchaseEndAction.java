@@ -21,29 +21,32 @@ public class CoinPurchaseEndAction extends AbstractController {
 			HttpSession session = request.getSession();
 	        MemberVO loginuser = (MemberVO) session.getAttribute("loginuser");
 	         
-	         if(loginuser.getUser_id().equals(user_id)) {
-	        	 // 로그인한 사용자가 자신의 코인을 수정하는 경우
+	        if(loginuser.getUser_id().equals(user_id)) {	// 로그인한 사용자가 자신의 코인을 수정하는 경우
 	     		
-	        	String coinmoney = request.getParameter("coinmoney");
-	     		
-	        	String productName = "코인충전"; // :"새우깡"; 등등 으로 변경가능 받아와야함
-	     		int productPrice = 100;	// 가격 변경가능
+	         	String optname = request.getParameter("optname"); // 옵션네임 받아와짐
+	        	
+	        	String coinmoney = request.getParameter("coinmoney"); // 옵션네임 받아와짐
+	        	int productPrice = Integer.parseInt(coinmoney);	// 가격 변경가능
 	     		
 	     		//Integer.parseInt(coinmoney)
 	     		
-	     		request.setAttribute("productName", productName);
+	        	System.out.println("~~~~~~~ 확인용 optname => " + optname);
+	        	
+	     		request.setAttribute("optname", optname);
 	     		request.setAttribute("productPrice", productPrice);
+	     		
 	     		request.setAttribute("email", loginuser.getUser_email());
 	     		request.setAttribute("name", loginuser.getUser_name());
 	     		request.setAttribute("mobile", loginuser.getUser_phone());
-	     		
 	     		request.setAttribute("user_id", user_id);
 	     		request.setAttribute("coinmoney", coinmoney);
 	     		
 				super.setRedirect(false);
 				super.setViewPage("/WEB-INF/shop/paymentGateway.jsp");
-	         }
-			else {
+	         
+	        }
+			
+	        else {
 				// 로그인한 사용자가 다른 사용자의 코인충전 결제를 시도하는 경우
 	
 				String message = "다른 사용자의 코인충전 결제 시도는 불가합니다.!!";
@@ -60,6 +63,7 @@ public class CoinPurchaseEndAction extends AbstractController {
 		
 		
 		else {
+			
 			// 로그인을 안했으면
 			String message = "코인충전을 하기 위해서는 먼저 로그인을 하세요";
 			String loc = "javascript:history.back()";			
