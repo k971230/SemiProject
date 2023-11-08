@@ -24,11 +24,15 @@ div#main {
 }
 
 
-
-
-
-
-    
+#main > div.row.mb-5 > div > div,
+#main > div:nth-child(4) > div > div {
+	border: solid 0px grey;
+	border-radius: 2%;
+}
+#main > div.row.mb-5 > div > div:hover,
+#main > div:nth-child(4) > div > div:hover {
+	transform: scale(1.087); /* 확대 비율을 조절할 수 있습니다. */
+}
 
 
 .btnBlue {

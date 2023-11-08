@@ -206,7 +206,7 @@
         </c:if>
     </div>
       <div style="text-align: center;"> 
-      <button type="button" class="btn btn-primary btnBlue" style="border-radius: 100px">모든 게임 보기</button>
+      <button type="button" class="btn btn-primary btnBlue" style="border-radius: 100px; font-weight: bold; font-size:18pt">모든 게임 보기</button>
       </div>
       
       

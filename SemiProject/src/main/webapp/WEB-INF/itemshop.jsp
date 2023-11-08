@@ -15,7 +15,7 @@
 	<div style="width:100%; margin-top: 10%;">
 		
 		
-		<input type="text" id="c_no" value="${requestScope.c_no}">
+		<input type="hidden" id="c_no" value="${requestScope.c_no}">
 		
 			
 		<%-- === HIT 상품을 모두 가져와서 디스플레이(더보기 방식으로 페이징 처리한 것) === --%>
