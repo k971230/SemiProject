@@ -21,7 +21,12 @@ public class GameVO {
 	private String 	g_info; // 게임정보
 	
 
+
 	private MainsdVO msdvo; // 카테고리VO
+
+
+	
+
 	private CategoryVO categvo; // 카테고리VO 
 	private SpecVO spvo;        // 스펙VO 
 	private OptVO optvo; // 카테고리VO 
@@ -246,6 +251,7 @@ public class GameVO {
 
 
 
+
 	public MainsdVO getMsdvo() {
 		return msdvo;
 	}
@@ -255,5 +261,6 @@ public class GameVO {
 	public void setMsdvo(MainsdVO msdvo) {
 		this.msdvo = msdvo;
 	}
+
 	
 }

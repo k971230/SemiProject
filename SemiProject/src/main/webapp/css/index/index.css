@@ -23,6 +23,7 @@ div#main {
     padding: 10px 20px;
 }
 
+<<<<<<< HEAD
 
 #main > div.row.mb-5 > div > div,
 #main > div:nth-child(4) > div > div {
@@ -35,6 +36,8 @@ div#main {
 }
 
 
+=======
+>>>>>>> branch 'Limch' of https://github.com/k971230/SemiProject.git
 .btnBlue {
 	
     width: auto;

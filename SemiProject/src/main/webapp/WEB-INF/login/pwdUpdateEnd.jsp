@@ -63,7 +63,7 @@
 			  else {
 				   // 암호가 정규표현식에 맞는 경우
 				   const frm = document.pwdUpdateEndFrm;
-				   frm.action = "<%= ctxPath%>/member/pwdUpdateEnd.bz";
+				   frm.action = "<%= ctxPath%>/login/pwdUpdateEnd.bz";
 				   frm.method = "post";
 				   frm.submit();
 			  }
@@ -119,7 +119,7 @@
    
    <div style="text-align: center; font-size: 20pt; color: white;" class="mt-5">
 	   <c:if test="${requestScope.n == 1}">
-	      사용자 ID ${requestScope.userid}님의 비밀번호가 변경되었습니다. <br>
+	      사용자 ID ${requestScope.user_id}님의 비밀번호가 변경되었습니다. <br>
 	   <button type="button" class="btn btn-danger my-5" onclick="javascript:location.href='<%= ctxPath%>/index.bz'">메인페이지로 돌아가기</button>
 	      
 	   </c:if>
